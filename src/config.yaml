@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: AfricTivistes CitizenLab Benin
+  site: 'https://citizenlabbenin.netlify.app'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Africtivistes CitizenLab Benin
+    template: '%s — AfricTivistes'
+  description: "AfricTivistes CitizenLab Benin 🇧🇯 est une fabrique citoyenne dont le but est d’appuyer, d’accompagner et d’outiller les acteurs de la société civile mauritanienne par la formation, le développement d’outils et l’accompagnement à l’innovation et à la co-création."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Africtivistes CitizenLab Benin
     images:
       - url: '~/assets/images/default.png'
         width: 1200
@@ -28,7 +28,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: fr
   textDirection: ltr
 
 apps:
