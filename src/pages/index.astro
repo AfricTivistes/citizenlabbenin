@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -13,7 +12,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Africtivistes Citizen Lab Benin 🇧🇯 — Votre plateforme d’information citoyenne',
   ignoreTitleTemplate: true,
 };
 ---
@@ -23,79 +22,65 @@ const metadata = {
 
   <Hero
     actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
+      { text: 'En savoir plus',
+        href: '#features',
+        variant: 'primary' },
     ]}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/citizenlabbenin_1.png', alt: 'Citizen Lab Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 3.0</span> + Tailwind CSS
+      Votre plateforme d’information
+      <span class="text-accent dark:text-accent highlight"> citoyenne</span>
+      au Bénin
     </Fragment>
-
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 3.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+      Promouvoir la participation citoyenne et la démocratie participative en impulsant de nouvelles dynamiques par l’utilisation de la technologie citoyenne (civic tech)
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
-  <Note />
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    tagline="AfricTivistes"
+    title="Citizen Lab Bénin"
+    subtitle="Ensemble pour une démocratie participative"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Lorem Ipsum',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Lorem Ipsum',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
+        title: 'Lorem Ipsum',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Lorem Ipsum',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Lorem Ipsum',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Lorem Ipsum',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
         icon: 'tabler:bulb',
       },
     ]}

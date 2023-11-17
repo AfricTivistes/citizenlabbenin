@@ -11,7 +11,7 @@ export const headerData = {
         },
         {
           text: 'Equipe',
-          href: getPermalink('/equipe'),
+          href: '#',
         },
       ],
     },
