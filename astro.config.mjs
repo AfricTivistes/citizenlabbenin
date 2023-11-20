@@ -50,6 +50,10 @@ export default defineConfig({
           'voice-presentation',
           'business-contact',
           'database',
+          'todo-list',
+          'page-template',
+
+
         ],
       },
     }),
