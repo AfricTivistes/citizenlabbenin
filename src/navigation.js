@@ -11,7 +11,7 @@ export const headerData = {
         },
         {
           text: 'Equipe',
-          href: getPermalink('/equipe'),
+          href: '#',
         },
       ],
     },
@@ -38,63 +38,52 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'CitizenLab',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        {
+          text: 'A Propos', href: getPermalink('/about') },
+        { text: 'Equipe', href: '#' },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Actualités',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: "Actualités", href: getBlogPermalink() },
+        { text: "Blog", href: getBlogPermalink() },
       ],
     },
     {
-      title: 'Support',
+      title: "Formations",
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: "Nos Formations", href: '#' },
       ],
     },
     {
-      title: 'Company',
-      links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
-      ],
-    },
+      title: "Nous Contacter",
+      links:[
+        { text: "test@test.com", href:'mailto:test@test.com' },
+        { text: "0094848439943", href: 'tel:0094848439943'},
+        {text: "Cotonou, Benin", href: '#'}
+      ]
+    }
   ],
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { text: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+    { text: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    { text: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { text: 'Youtube', icon: 'tabler:brand-youtube', href: '#' },
+    { text: 'Linkedin', icon: 'tabler:brand-linkedin', href: '#' },
+    { text: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    { text: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/AfricTivistes/citizenlabbenin' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+  <a href="https://www.africtivistes.com" target= '_blank'>
+  <img src="https://update.africtivistes.org/wp-content/uploads/2023/10/Logo-Africtivistes.png" alt="AfricTivistes" class="h-8" />
+  </a>
+    <a target= '_blank' class="text-green-600 hover:underline dark:text-gray-200" href="https://www.africtivistes.com"> AfricTivistes</a> · All rights reserved.
   `,
 };
