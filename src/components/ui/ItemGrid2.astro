@@ -15,9 +15,7 @@ const {
   container: containerClass = "",
   // container: containerClass = "sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
   panel: panelClass = "",
-  title: titleClass = "",
   description: descriptionClass = "",
-  icon: defaultIconClass = "text-primary",
 } = classes;
 ---
 
@@ -52,25 +50,10 @@ const {
               itemClasses?.panel
             )}
           >
-            {(icon || defaultIcon) && (
-              <Icon
-                name={icon || defaultIcon}
-                class={twMerge(
-                  "mb-2 w-10 h-10",
-                  defaultIconClass,
-                  itemClasses?.icon
-                )}
-              />
-            )}
-            <div
-              class={twMerge(
-                "text-xl font-bold",
-                titleClass,
-                itemClasses?.title
-              )}
-            >
-              {title}
-            </div>
+            <div class="flex items-center">
+                <Icon name={icon || defaultIcon} class="w-10 h-10" />
+                <div class="ml-4 text-xl font-bold">{title}</div>
+              </div>
             {description && (
               <p
                 class={twMerge(
