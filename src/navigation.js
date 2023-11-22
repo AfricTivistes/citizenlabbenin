@@ -72,7 +72,7 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { text: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+    { text: 'Twitter', icon: 'tabler:brand-x', href: '#' },
     { text: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { text: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { text: 'Youtube', icon: 'tabler:brand-youtube', href: '#' },

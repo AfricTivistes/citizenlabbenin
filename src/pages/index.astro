@@ -5,14 +5,12 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Africtivistes Citizen Lab Benin 🇧🇯 — Votre plateforme d’information citoyenne',
+  title: 'Africtivistes CitizenLab Benin 🇧🇯 — Votre plateforme d’information citoyenne',
   ignoreTitleTemplate: true,
 };
 ---
@@ -26,12 +24,12 @@ const metadata = {
         href: '#features',
         variant: 'primary' },
     ]}
-    image={{ src: '~/assets/images/citizenlabbenin_1.png', alt: 'Citizen Lab Hero Image' }}
+    image={{ src: '~/assets/images/citizenlabbenin_1.png', alt: 'CitizenLab Hero Image' }}
   >
     <Fragment slot="title">
       Votre plateforme d’information
       <span class="text-accent dark:text-accent highlight"> citoyenne</span>
-      au Bénin
+      au <span class="text-primary dark:text-primary highlight" >Bénin </span> 
     </Fragment>
     <Fragment slot="subtitle">
       Promouvoir la participation citoyenne et la démocratie participative en impulsant de nouvelles dynamiques par l’utilisation de la technologie citoyenne (civic tech)
@@ -44,44 +42,44 @@ const metadata = {
   <Features
     id="features"
     tagline="AfricTivistes"
-    title="Citizen Lab Bénin"
+    title="CitizenLab Bénin"
     subtitle="Ensemble pour une démocratie participative"
     items={[
       {
-        title: 'Lorem Ipsum',
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Lorem Ipsum',
+        title: 'Promouvoir la démocratie participative',
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
         icon: 'tabler:components',
       },
       {
-        title: 'Lorem Ipsum',
+        title: 'Promouvoir la participation citoyenne',
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
-        icon: 'tabler:list-check',
+        icon: 'tabler:components',
       },
       {
-        title: 'Lorem Ipsum',
+        title: 'Créer un réseau citoyen',
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
+        icon: 'tabler:link',
+      },
+      {
+        title: 'Déployer une campagne de plaidoyer en ligne',
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
         icon: 'tabler:rocket',
       },
       {
-        title: 'Lorem Ipsum',
+        title: 'Déployer des sessions de formation',
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
-        icon: 'tabler:arrows-right-left',
+        icon: 'tabler:transform',
       },
       {
-        title: 'Lorem Ipsum',
+        title: 'Fournir une base de données',
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
-        icon: 'tabler:bulb',
+        icon: 'tabler:database',
       },
     ]}
   />
@@ -89,33 +87,27 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Africtivistes Citizen Lab Bénin en X etapes"
+    title="Africtivistes CitizenLab Bénin en trois étapes"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Title 1</span>',
+        title: 'Octobre - Novembre 2023: <span class="font-medium">Appel à candidatures</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          "Appel a candidatures ouvert à tous les jeunes béninois pour recruter l'équipe projet de CitizenLab Benin.",
+        icon: 'tabler:progress-check',
       },
       {
-        title: 'Step 2: <span class="font-medium">Title 2</em>',
+        title: 'Novembre 2023: <span class="font-medium">Formation des formateurs</em>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          "Les sessions ont porté sur les dynamiques de la participation citoyenne; la stratégie de plaidoyer digitale et sur l'identification des engagements contenus dans le Menu des engagements de la Cohorte Jeunesse",
+        icon: 'tabler:progress-check',
       },
       {
-        title: 'Step 3: <span class="font-medium">Title 3</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Title!',
+        title: '24 Novembre 2023: <span class="font-medium">Lancement officiel du projet</em>',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: '~/assets/images/formation1.jpg',
       alt: 'Steps image',
     }}
   />
@@ -203,7 +195,7 @@ const metadata = {
       {
         title: "Qu'est-ce que le projet AfricTivistes CitizenLab Bénin ?",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
+          "AfricTivistes CitizenLab Benin est une fabrique citoyenne qui a pour objectif <b>d’appuyer, d’accompagner et d’outiller</b> les acteurs de la société civile du Bénin par la formation, le développement d’outils innovants. ",
       },
       {
         title: "Qu'est-ce que la Civic Tech ?",
@@ -211,9 +203,9 @@ const metadata = {
           "La Civic Tech est un terme qui désigne les technologies et les démarches qui favorisent et renforcent le rôle joué par les citoyens dans la consolidation des débats publics. Ils sont souvent utilisées par les jeunes pour s'engager politiquement et participer à la vie de leur pays",
       },
       {
-        title: "Pourquoi est-il important de soutenir la participation citoyenne au Bénin ?",
+        title: "Pourquoi AfricTivistes CitizenLab Benin encourage la participation citoyenne au Bénin ?",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
+          "AfricTivistes CitizenLab est une initiative de Promotion de la Participation Citoyenne  et de  de l’engagement civique et politique des jeunes du Bénin est une réponse à une demande des jeunes et des organisations de la société civile.",
       },
       {
         title: "Comment les Civic Tech ont-elles permis des mobilisations importantes en Afrique ?",
@@ -221,9 +213,9 @@ const metadata = {
           "Les Civic Tech ont permis des mobilisations importantes en Afrique en donnant une voix aux citoyens et en permettant des échanges d'informations en temps réel. Elles ont notamment été utilisées lors des campagnes électorales et pour organiser des manifestations et des protestations",
       },
       {
-        title: "Comment AfricTivistes CitizenLab Bénin encourage-t-il la participation citoyenne ?",
+        title: "Comment AfricTivistes CitizenLab Benin encourage la participation citoyenne au Bénin ?",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit velit vel augue vulputate, nec fermentum elit luctus.",
+          "Le projet compte passer par la production de contenus, le plaidoyer et la formation pour encourager la participation citoyenne au Bénin.",
       },
       {
         title: "Comment les Civic Tech ont-elles permis des mobilisations importantes en Afrique ?",
@@ -237,23 +229,12 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Formations', amount: 'X' },
-      { title: 'Jeunes', amount: 'X' },
-      { title: 'Forks', amount: 'X' },
-      { title: 'Users', amount: 'X' },
+      { title: 'Formations', amount: '3' },
+      { title: 'Jeunes outillés', amount: '75' },
+      { title: 'Jeunes engagés', amount: '15' },
+      { title: "Internautes", amount: '4M' },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
-
-
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+  
 </Layout>
