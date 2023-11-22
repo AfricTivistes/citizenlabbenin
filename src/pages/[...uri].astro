@@ -1,7 +1,7 @@
 ---
 export const prerender = true;
 import { APP_BLOG } from '~/utils/config';
-import Layout from "~/layouts/Layout.astro";
+import Layout from '~/layouts/PageLayout.astro';
 import { getNodeByURI, getAllUris } from "../utils/api";
 import Single from "../components/templates/Single.astro";
 import Post from "../components/templates/Post.astro";
@@ -45,7 +45,7 @@ function resolveContentTemplate(node) {
     let template;
     switch (node.__typename) {
         case "Post":
-            template = Single;
+            template = Post;
             break;
         case "Page":
             template = Single;
@@ -64,6 +64,6 @@ function resolveContentTemplate(node) {
 const Template = resolveContentTemplate(node);
 ---
 
-<Layout {metadata}>
+<Layout metadata={metadata}>
     <Template node={node} image={metadata.image}></Template>
 </Layout>

@@ -131,6 +131,12 @@ export async function findLatestPosts() {
                         uri
                       }
                     }
+                    terms {
+                      nodes {
+                        name
+                        slug
+                      }
+                    }
                     commentCount
                     excerpt
                     featuredImage {
