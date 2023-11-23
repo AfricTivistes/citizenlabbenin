@@ -18,13 +18,19 @@ export const headerData = {
     {
       text: 'Actualités',
       href: getBlogPermalink(),
+      links: [
+        {
+          text: 'Podcast',
+          href: '#',
+        },
+      ],
     },
     {
       text: 'Blog',
       href: getPermalink('astro', 'tag')
     },
     {
-      text: 'Nos Formations',
+      text: 'Formations',
       href: getPermalink('tutorials', 'category')
     },
     {
