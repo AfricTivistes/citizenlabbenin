@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import type { Post } from '~/types';
 import { APP_BLOG } from '~/utils/config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
+import { newsPagePostsQuery, findLatestPostsAPI } from "~/utils/api";
 
 const generatePermalink = async ({
   id,
@@ -156,7 +157,7 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 /** */
 export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
   const _count = count || 4;
-  const posts = await fetchPosts();
+  const posts = await findLatestPostsAPI();
 
   return posts ? posts.slice(0, _count) : [];
 };
@@ -164,7 +165,7 @@ export const findLatestPosts = async ({ count }: { count?: number }): Promise<Ar
 /** */
 export const getStaticPathsBlogList = async ({ paginate }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-  return paginate(await fetchPosts(), {
+  return paginate(await newsPagePostsQuery(), {
     params: { blog: BLOG_BASE || undefined },
     pageSize: blogPostsPerPage,
   });
