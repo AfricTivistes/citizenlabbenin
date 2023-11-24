@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import Brands from '~/components/widgets/Brands.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
@@ -230,11 +231,39 @@ const metadata = {
   <Stats
     stats={[
       { title: 'Formations', amount: '3' },
-      { title: 'Jeunes outillés', amount: '75' },
+      { title: 'Jeunes outillés', amount: '100' },
       { title: 'Jeunes engagés', amount: '15' },
       { title: "Internautes", amount: '4M' },
     ]}
   />
+
+
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Partenaires"
+    subtitle="Le projet est soutenu par l' EU International Partnerships et réalisé par la Youth Democracy Cohort"
+    icons={[]}
+    images={[
+      {
+        src: 'https://update.africtivistes.org/wp-content/uploads/2023/10/Logo-Africtivistes.png',
+        href:'https://www.africtivistes.com/fr/',
+        alt: 'AfricTivistes',
+      },
+      {
+        src: 'https://citizenlabbenin.africtivistes.org/wp-content/uploads/2023/11/logoue.png',
+        href: 'https://international-partnerships.ec.europa.eu/index_fr',
+        alt: "EU International Partnerships",
+      },
+      {
+        src: 'https://citizenlabbenin.africtivistes.org/wp-content/uploads/2023/11/logoydc.png',
+        href: 'https://youthdemocracycohort.com/',
+        alt: 'Youth Democracy Cohort',
+      },
+
+    ]}
+  />
+
 
   
 </Layout>
