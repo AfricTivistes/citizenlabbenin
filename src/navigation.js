@@ -61,7 +61,7 @@ export const footerData = {
     {
       title: "Formations",
       links: [
-        { text: "Nos Formations", href: '#' },
+        { text: "Formations", href: '#' },
       ],
     },
     {
