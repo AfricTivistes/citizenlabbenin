@@ -16,7 +16,6 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-console.log(post.terms.nodes)
 const datePost = Date.parse(post.date);
 const currentPath = Astro.url.href;
 const image = await findImage(post.featuredImage?.node?.sourceUrl);
