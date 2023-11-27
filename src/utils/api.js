@@ -21,6 +21,13 @@ export async function getNodeByURI(uri) {
                           permalink: uri
                         }
                       }
+                      terms {
+                        nodes {
+                          name
+                          slug
+                          permalink:uri
+                        }
+                      }
                       featuredImage {
                         node {
                           srcSet
@@ -80,21 +87,24 @@ export async function getNodeByURI(uri) {
   const { data } = await response.json();
   return data;
 }
-
 export async function getAllUris() {
   const response = await fetch(import.meta.env.WORDPRESS_API_URL, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `query GetAllUris {
-              posts(first: 100) {
-                nodes {
-                  uri
-                }
+            posts(first: 100) {
+              nodes {
+                uri
               }
-              
             }
-            `
+            pages {
+              nodes {
+                uri
+              }
+            }
+          }
+          `
     })
   });
   const { data } = await response.json();
@@ -112,7 +122,7 @@ export async function getAllUris() {
         }
       }
     })
-  return uris
+  return uris;
 }
 
 export async function findLatestPostsAPI() {

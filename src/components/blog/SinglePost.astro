@@ -16,6 +16,7 @@ export interface Props {
 }
 
 const { post } = Astro.props;
+console.log(post.terms.nodes)
 const datePost = Date.parse(post.date);
 const currentPath = Astro.url.href;
 const image = await findImage(post.featuredImage?.node?.sourceUrl);
@@ -29,12 +30,12 @@ const image = await findImage(post.featuredImage?.node?.sourceUrl);
           <Icon name="tabler:clock" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
           <time datetime={String(post.date)}>{getFormattedDate(datePost)}</time>
           {
-            post.category && (
+            post.categories?.nodes[0].name && (
               <>
                 {' '}
                 ·{' '}
-                <a class="capitalize hover:underline" href={getPermalink(post.category, 'category')}>
-                  {post.category.replaceAll('-', ' ')}
+                <a class="capitalize hover:underline" href={getPermalink(post.categories?.nodes[0].permalink, 'category')}>
+                  {post.categories?.nodes[0].name.replaceAll('-', ' ')}
                 </a>
               </>
             )
@@ -64,7 +65,7 @@ const image = await findImage(post.featuredImage?.node?.sourceUrl);
             alt={post.description || ''}
             aspectRatio="16:9"
             loading="eager"
-            width={900}
+            width={720}
             height={506}
             loading="eager"
             decoding="async"
@@ -91,7 +92,7 @@ const image = await findImage(post.featuredImage?.node?.sourceUrl);
       }
     </div>
     <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
-      <PostTags tags={post.terms?.nodes} class="mr-5" />
+      <PostTags tags={post.terms?.nodes.map(tag => tag.name)} class="mr-5" />
       <SocialShare url={currentPath} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
     </div>
   </article>
