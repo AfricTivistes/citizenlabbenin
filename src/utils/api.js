@@ -19,6 +19,7 @@ export async function getNodeByURI(uri) {
                         nodes {
                           name
                           permalink: uri
+                          slug
                         }
                       }
                       terms {
@@ -131,7 +132,7 @@ export async function findLatestPostsAPI() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `{
-                  posts(first: 4) {
+                  posts(first: 8) {
                     nodes {
                       date
                       permalink: uri
@@ -182,6 +183,13 @@ export async function newsPagePostsQuery() {
                         nodes {
                           name
                           permalink: uri
+                        }
+                      }
+                       terms {
+                        nodes {
+                          name
+                          slug
+                          permalink:uri
                         }
                       }
                       featuredImage {

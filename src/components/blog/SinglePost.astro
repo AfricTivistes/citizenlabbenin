@@ -28,17 +28,12 @@ const image = await findImage(post.featuredImage?.node?.sourceUrl);
         <p>
           <Icon name="tabler:clock" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
           <time datetime={String(post.date)}>{getFormattedDate(datePost)}</time>
-          {
-            post.categories?.nodes[0].name && (
-              <>
-                {' '}
+            {' '}
                 ·{' '}
-                <a class="capitalize hover:underline" href={getPermalink(post.categories?.nodes[0].permalink, 'category')}>
-                  {post.categories?.nodes[0].name.replaceAll('-', ' ')}
-                </a>
-              </>
-            )
-          }
+          { post.categories?.nodes.map(category => {
+                    return (
+                      <a class='capitalize hover:underline' href={category.permalink}>{category.name}</a>)
+                })}
           {post.readingTime && <> · {post.readingTime} min read</>}
         </p>
       </div>
@@ -91,7 +86,7 @@ const image = await findImage(post.featuredImage?.node?.sourceUrl);
       }
     </div>
     <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
-      <PostTags tags={post.terms?.nodes.map(tag => tag.name)} class="mr-5" />
+      <PostTags tags={post.terms?.nodes.map(tag => tag.slug)} class="mr-5" />
       <SocialShare url={currentPath} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
     </div>
   </article>

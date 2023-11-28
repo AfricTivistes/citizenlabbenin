@@ -50,17 +50,11 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
         <span class="text-sm">
           <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
           <time datetime={String(post.date)} class="inline-block">{getFormattedDate(datePost)}</time>
-          {
-            post.categories?.nodes[0].name && (
-              <>
-                {' '}
-                ·{' '}
-                <a class="capitalize hover:underline" href={getPermalink(post.categories?.nodes[0].permalink, 'category')}>
-                  {post.categories?.nodes[0].name.replaceAll('-', ' ')}
-                </a>
-              </>
-            )
-          }
+            {' '} · {' '}
+          { post.categories?.nodes.map(category => {
+                    return (
+                      <a class='capitalize hover:underline' href={category.permalink}>{category.name}</a>)
+          })}
         </span>
       </div>
       <h2 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
@@ -78,7 +72,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 
     {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg" set:html={post.excerpt}></p>}
     <footer class="mt-5">
-      <PostTags tags={post.tags} />
+      <PostTags tags={post.terms?.nodes.map(tag => tag.slug)} class="mr-5" />
     </footer>
   </div>
 </article>
