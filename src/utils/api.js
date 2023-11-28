@@ -47,6 +47,17 @@ export async function getNodeByURI(uri) {
                       permalink: uri
                       date
                       content
+                      featuredImage {
+                        node {
+                          srcSet
+                          sourceUrl
+                          altText
+                          mediaDetails {
+                            height
+                            width
+                          }
+                        }
+                      }
                     }
                     ... on Category {
                       id
@@ -123,7 +134,7 @@ export async function getAllUris() {
         }
       }
     })
-  return uris;
+    return uris;
 }
 
 export async function findLatestPostsAPI() {
