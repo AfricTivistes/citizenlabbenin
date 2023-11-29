@@ -7,7 +7,7 @@ export const headerData = {
       links: [
         {
           text: 'A Propos',
-          href: getPermalink('/about'),
+          href: getPermalink('/a-propos'),
         },
         {
           text: 'Equipe',
@@ -19,19 +19,29 @@ export const headerData = {
       text: 'Actualités',
       href: getBlogPermalink(),
       links: [
+
         {
-          text: 'Podcast',
-          href: '#',
+          text: 'Campagnes',
+          href: getPermalink('campagnes', 'category'),
         },
+        {
+          text: 'Podcasts',
+          href: getPermalink('podcast', 'category'),
+        },
+        {
+          text: 'Vidéos',
+          href: getPermalink('videos', 'category'),
+        },
+
       ],
     },
     {
       text: 'Blog',
-      href: getPermalink('astro', 'tag')
+      href: getPermalink('blog', 'category')
     },
     {
       text: 'Formations',
-      href: getPermalink('tutorials', 'category')
+      href: getPermalink('formation', 'category')
     },
     {
       text: 'Contact',
@@ -47,7 +57,7 @@ export const footerData = {
       title: 'CitizenLab',
       links: [
         {
-          text: 'A Propos', href: getPermalink('/about') },
+          text: 'A Propos', href: getPermalink('/a-propos') },
         { text: 'Equipe', href: '#' },
       ],
     },
@@ -55,20 +65,23 @@ export const footerData = {
       title: 'Actualités',
       links: [
         { text: "Actualités", href: getBlogPermalink() },
-        { text: "Blog", href: getBlogPermalink() },
+        { text: "Blog", href: getPermalink('blog', 'category') },
+        { text: 'Campagnes', href: getPermalink('campagnes', 'category') },
+        { text: 'Podcasts', href: getPermalink('podcast', 'category') },
+        { text: 'Vidéos', href: getPermalink('videos', 'category') },
       ],
     },
     {
       title: "Formations",
       links: [
-        { text: "Formations", href: '#' },
+        { text: "Formations", href: getPermalink('formation', 'category') },
       ],
     },
     {
       title: "Nous Contacter",
       links:[
         { text: "test@test.com", href:'mailto:test@test.com' },
-        { text: "0094848439943", href: 'tel:0094848439943'},
+        { text: "+229 97 39 99 953", href: 'tel:0022997399995'},
         {text: "Cotonou, Benin", href: '#'}
       ]
     }
