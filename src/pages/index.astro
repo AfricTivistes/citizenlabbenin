@@ -9,6 +9,7 @@ import Brands from '~/components/widgets/Brands.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Africtivistes CitizenLab Benin 🇧🇯 — Votre plateforme d’informations citoyenne',
@@ -41,7 +42,7 @@ const metadata = {
 
   <BlogLatestPosts
     title="Découvrez les dernières actualités!"
-    information={`Cette section revient sur l’actualité du projet et sera une vitrine sur tout ce qui se fait en    matière d’engagement et de participation citoyenne en Bénin.
+    information={`Vitrine de l'actualité et des activités autour de la participation citoyenne au Bénin.
                 `}
   />
 

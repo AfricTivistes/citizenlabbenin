@@ -42,25 +42,19 @@ const image = await findImage(post.featuredImage?.node?.sourceUrl);
       >
         {post.title}
       </h1>
-      <div
-        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-justify"
-      >
-        <!-- {post.excerpt} -->
-        <Fragment set:html={post.excerpt} />
-      </div>
 
       {
         image ? (
           <Image
             src={image}
-            class="max-w-full lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
+            class="max-w-full mt-7 lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
             widths={[400, 900]}
             sizes="(max-width: 900px) 400px, 900px"
             alt={post.description || ''}
-            aspectRatio="16:9"
+            aspectRatio="auto"
             loading="eager"
             width={720}
-            height={506}
+            height={720}
             loading="eager"
             decoding="async"
           />
