@@ -218,3 +218,39 @@ export async function newsPagePostsQuery() {
   const { data } = await response.json();
   return data.posts.nodes;
 }
+
+export async function getAllMembers() {
+  const response = await fetch(import.meta.env.WORDPRESS_API_URL, {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `{
+        equipes (where: {status: PUBLISH}, first: 100) {
+                nodes {
+                      featuredImage {
+                            node {
+                              altText
+                              mediaItemUrl
+                      }
+                      }
+                      title
+                      fonctions {
+                        equipe
+                        fonction
+                      }
+                      social {
+                        facebook
+                        instagram
+                        linkedin
+                        twitter
+                      }
+                  }
+        }
+        }     
+      `
+
+    })
+  });
+  const { data } = await response.json();
+  return data.equipes.nodes;
+}
