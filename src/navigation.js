@@ -11,7 +11,7 @@ export const headerData = {
         },
         {
           text: 'Equipe',
-          href: '#',
+          href: getPermalink('/equipe'),
         },
       ],
     },
@@ -69,18 +69,14 @@ export const footerData = {
         { text: 'Campagnes', href: getPermalink('campagnes', 'category') },
         { text: 'Podcasts', href: getPermalink('podcast', 'category') },
         { text: 'Vidéos', href: getPermalink('videos', 'category') },
+        { test: 'Formations', href: getPermalink('formation', 'category')},
       ],
     },
-    {
-      title: "Formations",
-      links: [
-        { text: "Formations", href: getPermalink('formation', 'category') },
-      ],
-    },
+
     {
       title: "Nous Contacter",
       links:[
-        { text: "test@test.com", href:'mailto:test@test.com' },
+        { text: "citizenlabbenin@africtivistes.org", href:'mailto:citizenlabbenin@africtivistes.org ' },
         { text: "+229 97 39 99 953", href: 'tel:0022997399995'},
         {text: "Cotonou, Benin", href: '#'}
       ]
@@ -91,12 +87,12 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { text: 'Twitter', icon: 'tabler:brand-x', href: 'https://twitter.com/BeninCitizenlab' },
-    { text: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/citizenlabbenin/' },
-    { text: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/profile.php?id=61553614994311' },
-    { text: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/citizen-lab-benin/about/' },
-    { text: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { text: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/AfricTivistes/citizenlabbenin' },
+    { icon: 'tabler:brand-x', href: 'https://twitter.com/BeninCitizenlab' },
+    { icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/citizenlabbenin/' },
+    { icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/profile.php?id=61553614994311' },
+    { icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/citizen-lab-benin/about/' },
+    { icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    { icon: 'tabler:brand-github', href: 'https://github.com/AfricTivistes/citizenlabbenin' },
   ],
   footNote: `
   <a href="https://www.africtivistes.com" target= '_blank'>
