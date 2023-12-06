@@ -77,7 +77,7 @@ export const footerData = {
       title: "Nous Contacter",
       links:[
         { text: "citizenlabbenin@africtivistes.org", href:'mailto:citizenlabbenin@africtivistes.org ' },
-        { text: "+229 97 39 99 953", href: 'tel:0022997399995'},
+        { text: "+229 97 39 99 95", href: 'tel:+22997399995'},
         {text: "Cotonou, Benin", href: '#'}
       ]
     }
