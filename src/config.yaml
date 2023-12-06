@@ -1,6 +1,6 @@
 site:
   name: AfricTivistes CitizenLab Benin
-  site: 'https://citizenlabbenin.netlify.app'
+  site: 'https://citizenlabbenin.org'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: Africtivistes CitizenLab Benin
     template: '%s — AfricTivistes'
-  description: "AfricTivistes CitizenLab Benin 🇧🇯 est une fabrique citoyenne dont le but est d’appuyer, d’accompagner et d’outiller les acteurs de la société civile mauritanienne par la formation, le développement d’outils et l’accompagnement à l’innovation et à la co-création."
+  description: "AfricTivistes CitizenLab Benin 🇧🇯 est une fabrique citoyenne dont le but est d’appuyer, d’accompagner et d’outiller les acteurs de la société civile béninoise par la formation, le développement d’outils et l’accompagnement à l’innovation et à la co-création."
   robots:
     index: true
     follow: true
@@ -34,7 +34,7 @@ i18n:
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 6
+    postsPerPage: 10
 
     post:
       isEnabled: true

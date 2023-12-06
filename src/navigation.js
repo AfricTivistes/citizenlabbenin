@@ -7,11 +7,11 @@ export const headerData = {
       links: [
         {
           text: 'A Propos',
-          href: getPermalink('/about'),
+          href: getPermalink('/a-propos'),
         },
         {
           text: 'Equipe',
-          href: '#',
+          href: getPermalink('/equipe'),
         },
       ],
     },
@@ -19,19 +19,29 @@ export const headerData = {
       text: 'Actualités',
       href: getBlogPermalink(),
       links: [
+
         {
-          text: 'Podcast',
-          href: '#',
+          text: 'Campagnes',
+          href: getPermalink('campagnes', 'category'),
         },
+        {
+          text: 'Podcasts',
+          href: getPermalink('podcast', 'category'),
+        },
+        {
+          text: 'Vidéos',
+          href: getPermalink('videos', 'category'),
+        },
+
       ],
     },
     {
       text: 'Blog',
-      href: getPermalink('astro', 'tag')
+      href: getPermalink('blog', 'category')
     },
     {
       text: 'Formations',
-      href: getPermalink('tutorials', 'category')
+      href: getPermalink('formation', 'category')
     },
     {
       text: 'Contact',
@@ -47,7 +57,7 @@ export const footerData = {
       title: 'CitizenLab',
       links: [
         {
-          text: 'A Propos', href: getPermalink('/about') },
+          text: 'A Propos', href: getPermalink('/a-propos') },
         { text: 'Equipe', href: '#' },
       ],
     },
@@ -55,20 +65,19 @@ export const footerData = {
       title: 'Actualités',
       links: [
         { text: "Actualités", href: getBlogPermalink() },
-        { text: "Blog", href: getBlogPermalink() },
+        { text: "Blog", href: getPermalink('blog', 'category') },
+        { text: 'Campagnes', href: getPermalink('campagnes', 'category') },
+        { text: 'Podcasts', href: getPermalink('podcast', 'category') },
+        { text: 'Vidéos', href: getPermalink('videos', 'category') },
+        { test: 'Formations', href: getPermalink('formation', 'category')},
       ],
     },
-    {
-      title: "Formations",
-      links: [
-        { text: "Formations", href: '#' },
-      ],
-    },
+
     {
       title: "Nous Contacter",
       links:[
-        { text: "test@test.com", href:'mailto:test@test.com' },
-        { text: "0094848439943", href: 'tel:0094848439943'},
+        { text: "citizenlabbenin@africtivistes.org", href:'mailto:citizenlabbenin@africtivistes.org ' },
+        { text: "+229 97 39 99 95", href: 'tel:+22997399995'},
         {text: "Cotonou, Benin", href: '#'}
       ]
     }
@@ -78,13 +87,12 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { text: 'Twitter', icon: 'tabler:brand-x', href: '#' },
-    { text: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { text: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { text: 'Youtube', icon: 'tabler:brand-youtube', href: '#' },
-    { text: 'Linkedin', icon: 'tabler:brand-linkedin', href: '#' },
-    { text: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { text: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/AfricTivistes/citizenlabbenin' },
+    { icon: 'tabler:brand-x', href: 'https://twitter.com/BeninCitizenlab' },
+    { icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/citizenlabbenin/' },
+    { icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/profile.php?id=61553614994311' },
+    { icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/citizen-lab-benin/about/' },
+    { icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    { icon: 'tabler:brand-github', href: 'https://github.com/AfricTivistes/citizenlabbenin' },
   ],
   footNote: `
   <a href="https://www.africtivistes.com" target= '_blank'>
