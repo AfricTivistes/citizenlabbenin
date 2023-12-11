@@ -53,7 +53,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
             {' '} · {' '}
           { post.categories?.nodes.map(category => {
                     return (
-                      <a class='capitalize hover:underline' href={category.permalink}>{category.name}</a>)
+                      <a class='capitalize hover:underline' href={category.permalink}> {category.name}</a>)
           })}
         </span>
       </div>
