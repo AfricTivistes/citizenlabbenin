@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -41,7 +41,7 @@ export const headerData = {
     },
     {
       text: 'Formations',
-      href: getPermalink('formation', 'category')
+      href: getPermalink('formations', 'category')
     },
     {
       text: 'Contact',
@@ -69,7 +69,7 @@ export const footerData = {
         { text: 'Campagnes', href: getPermalink('campagnes', 'category') },
         { text: 'Podcasts', href: getPermalink('podcast', 'category') },
         { text: 'Vidéos', href: getPermalink('videos', 'category') },
-        { test: 'Formations', href: getPermalink('formation', 'category')},
+        { test: 'Formations', href: getPermalink('formations', 'category')},
       ],
     },
 
@@ -83,7 +83,7 @@ export const footerData = {
     }
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
+    { text: 'Termes et Conditions', href: getPermalink('/termes-et-conditions') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
@@ -91,7 +91,6 @@ export const footerData = {
     { icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/citizenlabbenin/' },
     { icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/profile.php?id=61553614994311' },
     { icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/citizen-lab-benin/about/' },
-    { icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { icon: 'tabler:brand-github', href: 'https://github.com/AfricTivistes/citizenlabbenin' },
   ],
   footNote: `

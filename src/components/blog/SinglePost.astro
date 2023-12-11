@@ -32,7 +32,7 @@ const image = await findImage(post.featuredImage?.node?.sourceUrl);
                 ·{' '}
           { post.categories?.nodes.map(category => {
                     return (
-                      <a class='capitalize hover:underline' href={category.permalink}>{category.name}</a>)
+                      <a class='capitalize hover:underline' href={category.permalink}> {category.name}</a>)
                 })}
           {post.readingTime && <> · {post.readingTime} min read</>}
         </p>
