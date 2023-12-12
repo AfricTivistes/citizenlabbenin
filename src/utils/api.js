@@ -1,3 +1,31 @@
+export async function navQuery() {
+  const response = await fetch(import.meta.env.WORDPRESS_API_URL, {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `{
+              menuItems(where: {location: GATSBY_HEADER_MENU}) {
+                nodes {
+                  text: label
+                  parentId
+                  href: uri
+                  childItems {
+                    nodes {
+                      text: label
+                      href: uri
+                    }
+                  }
+                }
+              }
+            }
+            `
+    })
+  });
+  const { data } = await response.json();
+  const menuItems = Object.values(data)[0].nodes.filter(node => node.parentId === null);
+  return menuItems;
+}
+
 export async function getNodeByURI(uri) {
   const response = await fetch(import.meta.env.WORDPRESS_API_URL, {
     method: 'post',
