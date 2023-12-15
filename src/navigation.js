@@ -58,7 +58,7 @@ export const footerData = {
       links: [
         {
           text: 'A Propos', href: getPermalink('/a-propos') },
-        { text: 'Equipe', href: '#' },
+        { text: 'Equipe', href: getPermalink('/equipe') },
       ],
     },
     {
@@ -66,10 +66,10 @@ export const footerData = {
       links: [
         { text: "Actualités", href: getBlogPermalink() },
         { text: "Blog", href: getPermalink('blog', 'category') },
-        { text: 'Campagnes', href: getPermalink('campagnes', 'category') },
+        { text: 'Campagnes', href:'#' },
         { text: 'Podcasts', href: getPermalink('podcast', 'category') },
         { text: 'Vidéos', href: getPermalink('videos', 'category') },
-        { test: 'Formations', href: getPermalink('formations', 'category')},
+        { text: 'Formations', href: getPermalink('formations', 'category') },
       ],
     },
 
@@ -84,7 +84,7 @@ export const footerData = {
   ],
   secondaryLinks: [
     { text: 'Termes et Conditions', href: getPermalink('/termes-et-conditions') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    //{ text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { icon: 'tabler:brand-x', href: 'https://twitter.com/BeninCitizenlab' },
