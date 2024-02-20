@@ -30,15 +30,6 @@ export default defineConfig({
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
   output: 'static',
-  
-  plugins: [
-    [
-      'astro-plugin-google-analytics',
-      {
-        id: 'G-TT2H971V99', // Remplacez par votre ID de suivi Google Analytics
-      },
-    ],
-  ],
 
   integrations: [
     tailwind({
