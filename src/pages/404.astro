@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/Layout.astro';
 import { getHomePermalink } from '~/utils/permalinks';
+import Button from '~/components/ui/Button.astro';
 
 const title = `Error 404`;
 ---
@@ -11,13 +12,15 @@ const title = `Error 404`;
       <div class="max-w-md text-center">
         <h2 class="mb-8 font-bold text-9xl">
           <span class="sr-only">Error</span>
-          <span class="text-primary">404</span>
+          <span class="text-accent">404</span>
         </h2>
-        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+        <p class="text-3xl font-semibold md:text-3xl">Désolé, nous n'avons pas trouvé cette page.</p>
         <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
-          But dont worry, you can find plenty of other things on our homepage.
+          Mais ne vous inquiétez pas, vous trouverez bien d'autres choses sur notre page d'accueil.
         </p>
-        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
+        <div class="flex w-full sm:w-auto">
+                      <Button href={getHomePermalink()} variant='primary' text="Retour a l'accueil" class="w-full sm:mb-0" />
+                    </div>
       </div>
     </div>
   </section>
