@@ -164,9 +164,14 @@ export const findLatestPosts = async ({ count }: { count?: number }): Promise<Ar
 };
 
 /** */
+
 export const getStaticPathsBlogList = async ({ paginate }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-  return paginate(await newsPagePostsQuery(), {
+
+  // Récupération de tous les articles avec pagination
+  const allPosts = await newsPagePostsQuery();
+
+  return paginate(allPosts, {
     params: { blog: BLOG_BASE || undefined },
     pageSize: blogPostsPerPage,
   });
