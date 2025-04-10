@@ -50,8 +50,8 @@ attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
   if (defaultTheme.endsWith(':only')) {
     return;
   }
-  document.documentElement.classList.toggle('dark');
-  localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  document.documentElement.classList.toggle('light');
+  localStorage.theme = document.documentElement.classList.contains('light') ? 'light' : 'dark';
 });
 ```
 

@@ -6,16 +6,16 @@ import { UI } from "~/utils/config";
 
 <script is:inline define:vars={{ defaultTheme: UI.theme || "system" }}>
   function applyTheme(theme) {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+    if (theme === "light") {
+      document.documentElement.classList.add("light");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("light");
     }
     const matches = document.querySelectorAll("[data-aw-toggle-color-scheme] > input");
 
     if (matches && matches.length) {
       matches.forEach((elem) => {
-        elem.checked = theme !== "dark";
+        elem.checked = theme !== "light";
       });
     }
   }
@@ -23,11 +23,11 @@ import { UI } from "~/utils/config";
   if ((defaultTheme && defaultTheme.endsWith(":only")) || (!localStorage.theme && defaultTheme !== "system")) {
     applyTheme(defaultTheme.replace(":only", ""));
   } else if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    localStorage.theme === "light" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)
   ) {
-    applyTheme("dark");
-  } else {
     applyTheme("light");
+  } else {
+    applyTheme("dark");
   }
 </script>
